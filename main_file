@@ -1,0 +1,24 @@
+import tkinter as tk
+
+root = tk.Tk()
+root.title("tinkle script")
+root.geometry("600x400")
+
+def kill():
+    root.destroy()
+
+message = tk.Label(
+    root,
+    text = "Hello, rizzler!!!!",
+    foreground = "red",
+    background = "green"
+)
+button = tk.Button(root,
+                   text = "this will kill the window if you click it :`(",
+                   fg = "blue",
+                   bg = "red",
+                   command = kill
+)
+button.pack()
+message.pack()
+root.mainloop()
